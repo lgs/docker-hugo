@@ -13,7 +13,7 @@ It is so small because based on Diamond, which is the smallest lightweight Docke
 	ubuntu          12.04       8dbd9e392a96    8 months ago     131.3 MB
 
 
-( see [https://registry.hub.docker.com/u/lgsd/diamond/](lgsd/diamond) )
+( see [lgsd/diamond](https://registry.hub.docker.com/u/lgsd/diamond/) )
 
 ## Use
 
