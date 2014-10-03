@@ -3,18 +3,6 @@ docker-hugo
 
 It is a Docker base image for static sites generated with Hugo. 
 
-With a footprint of 14.19 MB (demo site included), [lgs/docker-hugo](https://github.com/lgs/docker-hugo) is the github repo for trusted docker hub: [lgsd/docker-hugo](https://registry.hub.docker.com/u/lgsd/docker-hugo/). 
-
-It is so small because based on Diamond, which is the smallest lightweight Docker container on the planet. With a footprint of 1.215 MB, it is even smaller than busybox:
-
-	REPOSITORY      TAG         IMAGE ID        CREATED          SIZE
-	lgsd/diamond    latest      b87c1c99c103    3 seconds ago    1.215 MB 
-	busybox         latest      769b9341d937    2 days ago       2.489 MB
-	ubuntu          12.04       8dbd9e392a96    8 months ago     131.3 MB
-
-
-( see [lgsd/diamond](https://registry.hub.docker.com/u/lgsd/diamond/) )
-
 ## Use
 
     $ docker run -d -p 1313:1313 -t lgsd/docker-hugo
@@ -35,13 +23,26 @@ It is so small because based on Diamond, which is the smallest lightweight Docke
     CONTAINER ID        IMAGE                COMMAND             CREATED       STATUS                   PORTS              NAMES
     7eac7b01e60d lgsd/docker-hugo:latest "/bin/hugo server -w 8 seconds ago  Up 7 seconds         0.0.0.0:1313->1313/tcp   yonath   
 
-    lsoave@basenode:~$ docker images
-    REPOSITORY                       TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-    lgsd/docker-hugo                 latest              4c1b3414d5c7        3 minutes ago       14.19 MB
-    lgsd/diamond                     latest              bfa7f7cadbff        7 months ago        1.215 MB
-    debian                           wheezy              99bedb6181f9        4 days ago          85.19 MB
-
 now open [http://localhost:1313/](http://localhost:1313/)
+
+## Footprint 
+
+With a footprint of 14.19 MB (blog/demo site included), lgs/docker-hugo is intended for experimenting with striped, smaller Docker containers, then not suited to be Official Repo.
+
+    lsoave@basenode:~$ docker images
+    REPOSITORY       TAG      IMAGE ID      CREATED        VIRTUAL SIZE
+    lgsd/docker-hugo latest   4c1b3414d5c7  3 minutes ago   14.19 MB
+    lgsd/diamond     latest   bfa7f7cadbff  7 months ago    1.215 MB
+    debian           wheezy   99bedb6181f9  4 days ago      85.19 MB
+
+It is so small because based on Diamond, which is the smallest lightweight Docker container on the planet. With a footprint of 1.215 MB, it is even smaller than busybox:
+
+     REPOSITORY      TAG         IMAGE ID        CREATED          SIZE
+     lgsd/diamond    latest      b87c1c99c103    3 seconds ago    1.215 MB
+     busybox         latest      769b9341d937    2 days ago       2.489 MB
+     ubuntu          12.04       8dbd9e392a96    8 months ago     131.3 MB
+
+( see [lgsd/diamond](https://registry.hub.docker.com/u/lgsd/diamond/) )
 
 ## Copyright
 
